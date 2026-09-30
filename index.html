@@ -33,7 +33,7 @@ section{padding:82px 0}.section-head{max-width:680px;margin-bottom:34px}.kicker{
 <div class="toast" id="toast">Application submitted.</div>
 <script>
 function go(id){document.getElementById(id).scrollIntoView({behavior:'smooth'});document.getElementById('nav').classList.remove('open')}
-function openApply(program){document.getElementById('applyModal').classList.add('show');if(program)document.getElementById('program').value=program}
+function openApply(program){window.open('https://docs.google.com/forms/d/e/1FAIpQLSd-Mwg3mUlGdXId3-1cyBR86Z0cXBut6vtRaNTIY-Usg3dtDA/viewform?usp=publish-editor','_blank','noopener,noreferrer')}
 function closeApply(){document.getElementById('applyModal').classList.remove('show')}
 function submitApply(e){e.preventDefault();closeApply();document.getElementById('toast').style.display='block';setTimeout(()=>document.getElementById('toast').style.display='none',2800);e.target.reset()}
 function verifyCert(){const v=document.getElementById('cert').value.trim().toUpperCase();const r=document.getElementById('result');r.style.display='block';if(v==='MX-PY-2026-0001'){r.className='result good';r.innerHTML='<strong>✓ VALID CERTIFICATE</strong><br><br><b>Rahul Sharma</b><br>Python Development Virtual Project Program<br>Completion Date: 30 October 2026<br>Certificate ID: MX-PY-2026-0001'}else{r.className='result';r.innerHTML='<b>Certificate not found.</b><br><span style="color:var(--muted)">Check the certificate ID and try again.</span>'}}
